@@ -4,6 +4,7 @@ import PlausibleTracker from "@/lib/plausible-tracker";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +29,10 @@ export default function RootLayout({
           <PageFooter />
         </div>
         <PlausibleTracker
-          domain={process.env.NEXT_PUBLIC_PLAUSIBLE_DOMAIN}
-          apiHost={process.env.NEXT_PUBLIC_PLAUSIBLE_API_HOST}
+          domain="aeternum-tracker.th.gl"
+          apiHost="https://metrics.th.gl"
         />
+        <Toaster />
       </body>
     </html>
   );
