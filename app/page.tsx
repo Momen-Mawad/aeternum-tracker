@@ -45,9 +45,6 @@ export default function Home() {
 
   // console.log(activitiesStore2);
 
-
-
-
   return (
     <main className="flex flex-col gap-4 container grow">
       <div className="grid grid-cols-12 items-center justify-items-center md:justify-items-end gap-4">

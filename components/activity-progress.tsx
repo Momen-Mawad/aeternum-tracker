@@ -3,12 +3,15 @@
 import { Progress } from "@/components/ui/progress";
 import { Activity } from "@/lib/activities";
 import { useActivitiesStore } from "@/lib/store";
+import { useCharacterStore } from "@/lib/store";
 import { cn } from "@/lib/utils";
 import { Check, EyeOff, Plus, X } from "lucide-react";
 import { Button } from "./ui/button";
 
+
 export function ActivityProgress({ title, max, frequently }: Activity) {
   const activitiesStore = useActivitiesStore();
+  //const activitiesStore = useCharacterStore("Al1");
 
   const progress = activitiesStore.progress[title] ?? 0;
   const isMax = progress === max;
